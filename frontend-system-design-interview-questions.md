@@ -1,155 +1,184 @@
-# Frontend System Design & Architecture Interview Questions
+# Frontend System Design Interview Questions: The Complete 2025 Guide
 
-> Build scalable UIs. Master frontend architecture, performance optimization, and modern web technologies for senior roles.
+Frontend system design is the most underrated interview category at top tech companies. Most candidates prep for LeetCode and backend system design — but for senior frontend and full-stack engineers, a frontend design round can determine whether you get the offer.
 
-<!-- Keywords: frontend design, frontend architecture, web performance, React interview, UI scaling -->
-
-[⬅ Back to All Categories](README.md)
+This guide covers the most commonly asked frontend system design questions, what interviewers are actually evaluating, and where to find full expert solutions for each one.
 
 ---
 
-## [Real-time Collaborative Whiteboard Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-whiteboard-architecture-kd1kNDLPGLLgUsna6DJzv2)
-> 📅 *4/10/2026*
+## What Is Frontend System Design?
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
+Frontend system design interviews ask you to architect complex, production-grade web applications from scratch. These questions aren't about CSS tricks or React hooks — they're about:
 
-Design a frontend architecture for a high-performance, real-time collaborative whiteboard. The system must handle low-latency vector graphics synchronization, conflict resolution for concurrent multi-user editing, and efficient network utilization for mobile-friendly bandwidth consumption.
-
-</details>
-
----
-
-## [Real-time Collaborative Code Editor Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-code-editor-design-p7EyBBBUdK4c7Qcj7k3n9s)
-> 📅 *4/9/2026*
-
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a collaborative web-based IDE frontend. The system must support real-time multi-user editing, conflict-free synchronization, syntax highlighting for multiple languages, and a robust offline-first experience that merges changes automatically when the user reconnects.
-
-</details>
+- **Component architecture** at scale (micro-frontends, design systems, shared state)
+- **Performance engineering** (rendering strategies, lazy loading, core web vitals)
+- **Real-time data** (WebSockets, SSE, polling strategies, optimistic updates)
+- **Offline & resilience** (service workers, caching, graceful degradation)
+- **Accessibility and internationalization** at the system level
+- **API design** between frontend and backend (REST, GraphQL, BFF)
+- **Security** (XSS, CSRF, CSP, auth token storage)
+- **Observability** (error boundaries, client-side monitoring, performance tracking)
 
 ---
 
-## [Scalable Retail Marketplace Frontend Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-retail-marketplace-frontend-architecture-wJ66TDi6vgnBYprpRJRD2X)
-> 📅 *4/8/2026*
+## Who Faces Frontend System Design Interviews?
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a high-performance, SEO-optimized frontend system for a large-scale retail marketplace. The system must support millions of products, provide a seamless search-to-checkout journey, and handle complex state management for shopping carts and multi-step checkout flows while maintaining strict performance budgets.
-
-</details>
+- **Senior Frontend Engineers** at FAANG+ companies
+- **Staff Engineers** expected to design cross-cutting frontend systems
+- **Full-Stack Engineers** at companies like Stripe, Figma, Linear, and Notion
+- **Engineering Managers** with frontend backgrounds in technical screening rounds
 
 ---
 
-## [Real-time High-Frequency Dashboard Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-high-frequency-dashboard-design-g1XcLKgNuyujmGYnfdPcVD)
-> 📅 *4/8/2026*
+## Frontend System Design Questions & Solutions
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
+### 📰 News Feeds & Social Media
 
-Design a frontend architecture for a real-time financial dashboard capable of handling high-frequency data updates for 50,000 concurrent users. Address challenges such as DOM performance, main-thread blocking, efficient data serialization, and smooth UI updates under high market volatility.
+Feed systems are the most common frontend design question — they test virtually every frontend skill at once.
 
-</details>
+- **[Scalable Social Media Feed System](https://interviewgpt.deepchill.app/blogs/fe-design/high-performance-social-media-feed-system-sDiWATtwVQ19ebLuZ7NYa5)**  
+  Infinite scroll architecture, virtual DOM windowing, optimistic updates, and real-time new post notifications. Covers the tension between perceived performance and actual load.
 
----
-
-## [High-Performance Web Mail Client](https://interviewgpt.deepchill.app/blogs/fe-design/high-performance-web-mail-client-wxEmsRpDKg9YbgnEE8wMDE)
-> 📅 *4/7/2026*
-
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a high-performance, web-based email client similar to Gmail. Focus on managing a large volume of messages, implementing a local-first synchronization strategy with IndexedDB, ensuring security against XSS in email bodies, and providing a seamless multi-pane user interface with list virtualization.
-
-</details>
+- **[Scalable NewsFeed Frontend Design](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-newsfeed-frontend-design-5uz2j5yEZtF9YGsmu7UMpn)**  
+  SSR vs CSR trade-offs for feed pages, CDN edge caching strategies, and skeleton screens for perceived performance.
 
 ---
 
-## [Scalable Video Streaming Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-video-streaming-architecture-8Ao2cqcYeQuMqaVc4NDipx)
-> 📅 *4/2/2026*
+### 🔍 Search & Discovery
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a high-performance video streaming platform similar to YouTube. Focus on achieving low latency (TTFF), implementing adaptive bitrate streaming (ABR) via HLS/DASH, and optimizing discovery through efficient metadata management and thumbnail delivery.
-
-</details>
+- **[Search Engine Interface Design](https://interviewgpt.deepchill.app/blogs/fe-design/search-engine-interface-design-3xof4cDKFgpeTMsuqKWYZM)**  
+  Autocomplete with debouncing, faceted search UI, keyboard navigation accessibility, and result pagination strategies. How to design a search UX that handles 0-result states gracefully.
 
 ---
 
-## [Scalable Video Streaming Frontend](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-video-streaming-frontend-9Sf56oo1rFHGiXjJAT2BQ9)
-> 📅 *3/30/2026*
+### 📸 Photo & Media Sharing
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a frontend architecture for a high-traffic video streaming platform. Focus on playback performance, adaptive bitrate streaming integration, efficient content discovery via virtualization, and maintaining a consistent global playback state across a single-page application.
-
-</details>
+- **[Photo Sharing App Design](https://interviewgpt.deepchill.app/blogs/fe-design/photo-sharing-app-design-3Wy4pU6geSF88cqqyXZcg5)**  
+  Image upload with progress, client-side compression, lazy loading with Intersection Observer, responsive image serving (`srcset`), and gallery virtualization.
 
 ---
 
-## [Travel Booking Platform Design](https://interviewgpt.deepchill.app/blogs/fe-design/travel-booking-platform-design-xi3rjZuN2uLspR2nktm6zL)
-> 📅 *3/30/2026*
+### ✏️ Real-time Collaboration
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
+Real-time collaboration is the hardest category of frontend system design — it requires understanding CRDTs, OT, and WebSocket state management.
 
-Design a scalable frontend architecture for a travel booking platform (e.g., Booking.com). Focus on SEO-friendly search results, complex filtering state management, and a robust, multi-step checkout funnel with integrated payments.
+- **[Real-time Collaborative Whiteboard Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-whiteboard-architecture-kd1kNDLPGLLgUsna6DJzv2)**  
+  Canvas rendering, CRDT-based state sync, cursor broadcasting, and conflict resolution in a multi-user drawing environment. How Figma and Miro approach the same problem.
 
-</details>
+- **[Real-time Collaborative Code Editor Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-code-editor-design-p7EyBBBUdK4c7Qcj7k3n9s)**  
+  Operational Transformation vs CRDT for text, Monaco Editor integration, awareness (who's editing what), and execution sandboxing.
 
----
-
-## [Real-time Collaborative Editor Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-editor-design-t1kKTN5kbdwqsFV4XtgSmu)
-> 📅 *3/28/2026*
-
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a high-performance, real-time collaborative document editor (similar to Google Docs or Notion). The system must support concurrent editing with conflict resolution, real-time presence indicators, and a local-first architecture for offline resilience. Explain your choice of conflict resolution strategy (OT vs CRDT) and how you ensure 60fps rendering in a document with thousands of elements.
-
-</details>
+- **[Real-time Collaborative Editor Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-collaborative-editor-design-t1kKTN5kbdwqsFV4XtgSmu)**  
+  Notion-style rich text editing: block-based document model, real-time sync, offline support with reconciliation.
 
 ---
 
-## [Photo Sharing App Design](https://interviewgpt.deepchill.app/blogs/fe-design/photo-sharing-app-design-3Wy4pU6geSF88cqqyXZcg5)
-> 📅 *3/28/2026*
+### 🛒 E-commerce & Marketplace
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
+- **[Scalable Retail Marketplace Frontend Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-retail-marketplace-frontend-architecture-wJ66TDi6vgnBYprpRJRD2X)**  
+  Product listing pages with infinite scroll, cart state management across tabs, checkout flow resilience, and A/B testing infrastructure. How Amazon and eBay handle thousands of concurrent sellers and buyers.
 
-Design the frontend architecture for a high-performance photo-sharing application. Focus on image optimization strategies, infinite feed virtualization, resilient upload management for unstable networks, and optimistic UI updates for social interactions.
-
-</details>
+- **[Scalable E-commerce Marketplace Frontend](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-e-commerce-marketplace-frontend-hoXV3k8uzXYe2sqMkUavsw)**  
+  Micro-frontend architecture for large marketplace teams, shared design systems, and cross-team API contracts.
 
 ---
 
-## [Scalable E-commerce Marketplace Frontend](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-e-commerce-marketplace-frontend-hoXV3k8uzXYe2sqMkUavsw)
-> 📅 *3/28/2026*
+### 📊 Dashboards & Data Visualization
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design the frontend architecture for a high-traffic e-commerce marketplace. The system must support SEO-friendly product discovery, complex faceted search, a persistent shopping cart, and a secure multi-step checkout flow. Focus on performance optimization, state management strategies, and a scalable component architecture.
-
-</details>
+- **[Real-time High-Frequency Dashboard Design](https://interviewgpt.deepchill.app/blogs/fe-design/real-time-high-frequency-dashboard-design-g1XcLKgNuyujmGYnfdPcVD)**  
+  Sub-second data refresh, streaming chart updates with D3/Chart.js, throttling DOM updates during high-frequency events, and memory leak prevention in long-running dashboards.
 
 ---
 
-## [Scalable NewsFeed Frontend Design](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-newsfeed-frontend-design-5uz2j5yEZtF9YGsmu7UMpn)
-> 📅 *3/27/2026*
+### ✈️ Travel & Booking
 
-<details>
-<summary><b>🔍 View Detailed Interview Prompt</b></summary>
-
-Design a high-performance NewsFeed frontend system. The solution must address infinite scrolling, rendering optimization for large datasets (virtualization), data consistency across multiple views, and strategies to minimize Layout Shift (CLS). Include details on state normalization and cursor-based pagination handling.
-
-</details>
+- **[Travel Booking Platform Design](https://interviewgpt.deepchill.app/blogs/fe-design/travel-booking-platform-design-xi3rjZuN2uLspR2nktm6zL)**  
+  Multi-step form state management, date picker complexity, search result caching, and handling stale inventory gracefully. The challenge of booking flows with network-dependent confirmation.
 
 ---
 
-*Generated by [InterviewGPT](https://interviewgpt.ai) on Thu Apr 16 2026*
+### 📺 Video Streaming
+
+- **[Scalable Video Streaming Architecture](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-video-streaming-architecture-8Ao2cqcYeQuMqaVc4NDipx)**  
+  HLS/DASH adaptive bitrate in the browser, custom player controls, subtitle rendering, and quality auto-selection based on bandwidth detection.
+
+- **[Scalable Video Streaming Frontend](https://interviewgpt.deepchill.app/blogs/fe-design/scalable-video-streaming-frontend-9Sf56oo1rFHGiXjJAT2BQ9)**  
+  Buffering strategies, seeking optimization, and video preloading for autoplay feeds.
+
+---
+
+### 📧 Email & Communication
+
+- **[High-Performance Web Mail Client](https://interviewgpt.deepchill.app/blogs/fe-design/high-performance-web-mail-client-wxEmsRpDKg9YbgnEE8wMDE)**  
+  Virtual list rendering for large inboxes (tens of thousands of emails), offline draft support, rich text email composition, and threading UX. How Gmail handles performance.
+
+---
+
+## The Frontend System Design Framework
+
+Use this structure for any frontend design question:
+
+### 1. Clarify Requirements (3–5 min)
+- What are the core user journeys?
+- What scale? (DAU, concurrent users, geographic distribution)
+- What performance targets? (LCP, FID, CLS — Core Web Vitals)
+- What devices and browsers to support?
+
+### 2. High-Level Architecture (5 min)
+- What rendering strategy: SSR, CSR, SSG, ISR, or hybrid?
+- What's the component hierarchy?
+- Where does state live: server, client, URL, cache?
+- What does the API contract look like?
+
+### 3. Core Component Design (10 min)
+- Data flow: how does data get to the component? (REST/GraphQL/WebSocket)
+- State management: local state, global state (Redux/Zustand/Jotai), server state (React Query/SWR)
+- Key UI components and their props/interfaces
+- How does the component handle loading, error, and empty states?
+
+### 4. Performance (5 min)
+- Code splitting and lazy loading strategy
+- Image optimization: format, sizing, lazy loading, preloading critical assets
+- Critical rendering path optimization
+- Caching: browser cache, service worker, CDN
+
+### 5. Real-time (if applicable) (5 min)
+- WebSocket vs SSE vs long polling — why?
+- How to handle disconnections and reconnection logic
+- Optimistic updates and rollback strategy
+
+### 6. Accessibility & Internationalization (3 min)
+- ARIA roles and keyboard navigation
+- i18n: RTL support, date/currency formatting
+
+### 7. Security (3 min)
+- XSS prevention (CSP headers, output encoding)
+- Auth token storage (HttpOnly cookies vs localStorage trade-offs)
+- CSRF protection
+
+### 8. Observability (2 min)
+- Error boundaries and client-side error logging (Sentry)
+- Performance monitoring (Lighthouse CI, RUM)
+- Feature flag integration for gradual rollouts
+
+---
+
+## Common Mistakes in Frontend Design Interviews
+
+**Not discussing rendering strategy** — Whether to use SSR or CSR is one of the first decisions and it affects everything downstream. Always address it.
+
+**Ignoring the network** — Frontend engineers who design without thinking about request waterfalls, API shapes, and caching strategies miss a key evaluation dimension.
+
+**Skipping accessibility** — Senior engineers are expected to design accessible systems by default, not as an afterthought.
+
+**No discussion of state complexity** — How does the component know when to refetch? How do you handle stale data? Cache invalidation is a frontend problem too.
+
+**Building a perfect system instead of an MVP** — Start with the simplest thing that works, then explain what you'd add for scale.
+
+---
+
+Practice every question above — with full expert solutions — at **[InterviewGPT](https://interviewgpt.deepchill.app)**.
+
+---
+
+*InterviewGPT is the AI-powered interview prep platform for engineers targeting senior roles at FAANG+ companies. Practice system design, frontend design, ML design, SQL, and behavioral interviews with expert-level guided solutions.*
