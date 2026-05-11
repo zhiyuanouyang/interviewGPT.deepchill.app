@@ -1,6 +1,6 @@
 # 🚀 Premium Tech Interview Preparation Guide
 
-Master your tech interviews with real-world questions and rubric-aligned solutions. This repository contains a curated collection of interview questions across various domains, generated and polished by [InterviewGPT](https://interviewgpt.ai).
+Master your tech interviews with real-world questions and rubric-aligned solutions. This repository contains a curated collection of interview questions across various domains, generated and polished by [InterviewGPT](https://interviewgpt.deepchill.app).
 
 ## 📚 Categories
 
@@ -13,4 +13,4 @@ Master your tech interviews with real-world questions and rubric-aligned solutio
 
 ---
 
-*Last updated by [InterviewGPT](https://interviewgpt.ai) on Thu Apr 16 2026*
+*Last updated by [InterviewGPT](https://interviewgpt.deepchill.app) on Thu Apr 16 2026*
